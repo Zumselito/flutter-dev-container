@@ -1,0 +1,13 @@
+// For format details, see https://aka.ms/devcontainer.json.
+{
+  "name": "Flutter",
+  "image": "ghcr.io/thephaseless/devcontainers/flutter:latest",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.makefile-tools"
+      ]
+    }
+  },
+  "postAttachCommand": "sudo apt update && flutter upgrade"
+}
