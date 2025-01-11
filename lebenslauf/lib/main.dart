@@ -1,66 +1,35 @@
 import 'package:flutter/material.dart';
 
-/// Flutter code sample for [AppBar].
+void main() => runApp(CVApp());
 
-void main() => runApp(const AppBarApp());
-
-class AppBarApp extends StatelessWidget {
-  const AppBarApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: AppBarExample(),
-    );
-  }
-}
-
-class AppBarExample extends StatelessWidget {
-  const AppBarExample({super.key});
+class CVApp extends StatelessWidget {
+  CVApp({super.key});
+  final ValueNotifier<ThemeMode> _notifier = ValueNotifier(ThemeMode.system);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('AppBar Demo'),
-        actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.add_alert),
-            tooltip: 'Show Snackbar',
-            onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('This is a snackbar')));
-            },
+    return ValueListenableBuilder<ThemeMode>(
+      valueListenable: _notifier,
+      builder: (_, mode, __) {
+        return MaterialApp(
+          theme: ThemeData.light(),
+          darkTheme: ThemeData.dark(),
+          themeMode: mode,
+          home: Scaffold(
+            body: Center(
+              child: Column(
+                children:[
+                  Text('${_notifier.value}'),
+                  ElevatedButton(
+                    onPressed: () => _notifier.value = mode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light,
+                    child: Text('Toggle Theme')
+                  )
+                ]            
+              ),
+            ),
           ),
-          IconButton(
-            icon: const Icon(Icons.navigate_next),
-            tooltip: 'Go to the next page',
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute<void>(
-                builder: (BuildContext context) {
-                  return Scaffold(
-                    appBar: AppBar(
-                      title: const Text('Next page'),
-                    ),
-                    body: const Center(
-                      child: Text(
-                        'This is the next page',
-                        style: TextStyle(fontSize: 24),
-                      ),
-                    ),
-                  );
-                },
-              ));
-            },
-          ),
-        ],
-      ),
-      body: const Center(
-        child: Text(
-          'This is the home page',
-          style: TextStyle(fontSize: 24),
-        ),
-      ),
+        );
+      },
     );
   }
 }
