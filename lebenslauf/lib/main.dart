@@ -1,49 +1,57 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(CVApp());
+void main() => runApp(const CVApp());
 
 class CVApp extends StatelessWidget {
-  CVApp({super.key});
-  final ValueNotifier<ThemeMode> _notifier = ValueNotifier(ThemeMode.system);
+  const CVApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    bool isDarkMode =
-        MediaQuery.of(context).platformBrightness == Brightness.dark;
+    return const MaterialApp(
+      home: CVHome(),
+    );
+  }
+}
 
-    return ValueListenableBuilder<ThemeMode>(
-      valueListenable: _notifier,
-      builder: (_, mode, __) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          theme: ThemeData.light(),
-          darkTheme: ThemeData.dark(),
-          themeMode: mode,
-          home: Scaffold(
-            appBar: AppBar(
-              title: const Text('Herzlich Willkommen'),
-              actions: [
-                ElevatedButton(
-                  onPressed: () {
-                    _notifier.value = mode == ThemeMode.light
-                        ? ThemeMode.dark
-                        : ThemeMode.light;
-                    isDarkMode = !isDarkMode;
-                  },
-                  child: Icon(isDarkMode
-                      ? Icons.wb_sunny_outlined
-                      : Icons.bubble_chart),
-                ),
+class CVHome extends StatelessWidget {
+  const CVHome({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            expandedHeight: MediaQuery.of(context).size.height * 0.65,
+            pinned: true,
+            stretch: true,
+            flexibleSpace: FlexibleSpaceBar(
+              background: Image.asset('assets/img/appbar-bg.jpg', fit: BoxFit.cover),
+              title: Text('Herzlich willkommen'),
+              centerTitle: true,
+              stretchModes: [
+                StretchMode.blurBackground,
+                StretchMode.zoomBackground,
+                StretchMode.fadeTitle
               ],
             ),
-            body: Center(
-              child: Column(children: [
-                Text('${MediaQuery.platformBrightnessOf(context)}'),
-              ]),
+          ),
+          SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (BuildContext context, int index) {
+                return Container(
+                  color: index.isOdd ? Colors.white : Colors.black12,
+                  height: 100.0,
+                  child: Center(
+                    child: Text('$index', textScaler: const TextScaler.linear(5)),
+                  ),
+                );
+              },
+              childCount: 20,
             ),
           ),
-        );
-      },
+        ],
+      ),
     );
   }
 }
