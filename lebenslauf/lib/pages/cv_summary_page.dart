@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CVSummerySliverAppBar extends StatelessWidget {
-  const CVSummerySliverAppBar({super.key});
+class CVSummaryPage extends StatelessWidget {
+  const CVSummaryPage({super.key});
 
   @override
   Widget build(BuildContext context) {
