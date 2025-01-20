@@ -1,0 +1,5 @@
+import 'package:flutter/material.dart';
+
+class CVSummaryData {
+  static const cvSummaryText = Text('Mein Name ist Stephan Djordjevic und ich bin Full-Stack-Web-Entwickler. In letzter Zeit habe ich mich mehr und mehr mit Flutter/Dart beschäftig und bin begeistert... Diplom-Ökonom mit mehr als 20 Jahren Erfahrung in der digitalen Werbebranche. Umfassende Kenntnisse in der automatisierten Werbeauslieferung sowie deren Optimierung: AdServer-Migration, Tag-, Ad- und Qualitätsmanagement, Reporting & Analyse uvm. Diesbezüglich umsetzende und beratende Tätigkeit für große Online-Netzwerke, wie z.B. Interactive Media CCSP AG oder Axel Springer Media Impact. Beruflich wie privat großes Interesse an und Verständnis von Online-Technologien. Stetige Weiterentwicklung der persönlichen Programmier- und Entwickler-Fähigkeiten.');
+}

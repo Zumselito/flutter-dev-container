@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lebenslauf/pages/cv_summary_page.dart';
-import 'package:lebenslauf/pages/education_page.dart';
-import 'package:lebenslauf/pages/projects_page.dart';
-import 'package:lebenslauf/pages/work_experience_page.dart';
+import 'package:lebenslauf/theme/theme_customize.dart';
 import 'package:lebenslauf/utils/navbar.dart';
 
 void main() => runApp(const CVApp());
@@ -13,7 +10,9 @@ class CVApp extends StatefulWidget {
   @override
   State<CVApp> createState() => _CVAppState();
 
-  static _CVAppState? of(BuildContext context) => context.findAncestorStateOfType<_CVAppState>();
+  // ignore: library_private_types_in_public_api
+  static _CVAppState? of(BuildContext context) =>
+      context.findAncestorStateOfType<_CVAppState>();
 }
 
 class _CVAppState extends State<CVApp> {
@@ -26,19 +25,30 @@ class _CVAppState extends State<CVApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'CV-App',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.light(useMaterial3: true),
-      darkTheme: ThemeData.dark(useMaterial3: true),
-      themeMode: _themeMode,
-      home: NavBar(),
-      routes: {
-        '/cvsummarypage': (context) => CVSummaryPage(),
-        '/workexperiencepage': (context) => WorkExperiencePage(),
-        '/educationpage': (context) => EducationPage(),
-        '/projectspage': (context) => ProjectsPage()
-      }
+    return Expanded(
+      child: Container(
+        alignment: Alignment.center,
+        decoration: const BoxDecoration(image: DecorationImage(image: AssetImage('../assets/img/app-bg.jpg'), fit: BoxFit.cover)),
+        child: MaterialApp(
+          title: 'Curriculum Vitae',
+          debugShowCheckedModeBanner: false,
+          theme: lightTheme,
+          darkTheme: darkTheme,
+          themeMode: _themeMode,
+          home: Center(
+            child: Container(
+              constraints: const BoxConstraints(maxWidth: 1000),
+              child: NavBar(),
+            ),
+          ),
+          // routes: {
+          //   '/cvsummarypage': (context) => CVSummaryPage(),
+          //   '/workexperiencepage': (context) => WorkExperiencePage(),
+          //   '/educationpage': (context) => EducationPage(),
+          //   '/projectspage': (context) => ProjectsPage()
+          // }
+        )
+      ),
     );
   }
 }

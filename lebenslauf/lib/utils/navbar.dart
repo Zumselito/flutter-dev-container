@@ -32,7 +32,7 @@ class _NavBarState extends State<NavBar> {
             leading: Column(
               children: [
                 Container(
-                  margin: EdgeInsets.only(bottom: 12),
+                  margin: EdgeInsets.only(top: 6, bottom: 12),
                   child: ElevatedButton.icon(
                     onPressed: () => setState(() => isExtended = !isExtended),
                     label: Icon(
@@ -52,13 +52,13 @@ class _NavBarState extends State<NavBar> {
             groupAlignment: 0,
             destinations: const [
               NavigationRailDestination(
-                  icon: Icon(Icons.person_search), label: Text('Profil')),
+                  icon: Icon(Icons.person_search), label: Text('Berufsprofil')),
               NavigationRailDestination(
-                  icon: Icon(Icons.construction), label: Text('Erfahrungen')),
+                  icon: Icon(Icons.construction), label: Text('Berufserfahrung')),
               NavigationRailDestination(
                   icon: Icon(Icons.school), label: Text('Ausbildung')),
               NavigationRailDestination(
-                  icon: Icon(Icons.code), label: Text('Projekt'))
+                  icon: Icon(Icons.code), label: Text('CV-App'))
             ],
           ),
         Expanded(child: buildPages())
@@ -66,9 +66,6 @@ class _NavBarState extends State<NavBar> {
       bottomNavigationBar: MediaQuery.of(context).size.width < 640
           ? BottomNavigationBar(
               currentIndex: selectedIndex,
-              unselectedItemColor: Colors.grey,
-              selectedItemColor: Colors
-                  .indigoAccent, // Zumsel: Später mit "selectedIconTheme" austauschen!
               onTap: (int index) {
                 setState(() {
                   selectedIndex = index;
@@ -76,13 +73,13 @@ class _NavBarState extends State<NavBar> {
               },
               items: const [
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.person_search), label: 'Profil'),
+                    icon: Icon(Icons.person_search), label: 'Berufsprofil'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.construction), label: 'Erfahrungen'),
+                    icon: Icon(Icons.construction), label: 'Berufserfahrung'),
                 BottomNavigationBarItem(
                     icon: Icon(Icons.school), label: 'Ausbildung'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.code), label: 'Projekt')
+                    icon: Icon(Icons.code), label: 'CV-App')
               ],
             )
           : null,
