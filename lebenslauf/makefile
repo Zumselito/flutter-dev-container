@@ -1,7 +1,7 @@
 # Makefile for deploying the Lebenslauf project to GitHub Pages.
 
-BASE_HREF = '/Flutter-Lebenslauf/'
-GITHUB_REPO = https://github.com/Zumselito/Flutter-Lebenslauf.git
+BASE_HREF = '/flutter-lebenslauf/'
+GITHUB_REPO = https://github.com/Zumselito/flutter-lebenslauf.git
 BUILD_VERSION = $(shell grep 'version:' pubspec.yaml | awk '{print $$2}')
 FONT_RED := $(shell tput setaf 1)
 FONT_GREEN := $(shell tput setaf 2)
@@ -22,7 +22,7 @@ deploy-web:
 	flutter pub get
 
 	@echo "$(FONT_BLUE)Building project for web...$(FONT_RESET)"
-	flutter build web --base-href=$(BASE_HREF) --release
+	flutter build web --base-href $(BASE_HREF) --release
 
 	@echo "$(FONT_BLUE)Deploying to git repository...$(FONT_RESET)"
 	cd build/web && \

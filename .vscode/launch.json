@@ -5,6 +5,26 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "cv",
+      "cwd": "cv",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "cv (profile mode)",
+      "cwd": "cv",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "cv (release mode)",
+      "cwd": "cv",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
       "name": "lebenslauf",
       "cwd": "lebenslauf",
       "request": "launch",

@@ -41,12 +41,6 @@ class _CVAppState extends State<CVApp> {
               child: NavBar(),
             ),
           ),
-          // routes: {
-          //   '/cvsummarypage': (context) => CVSummaryPage(),
-          //   '/workexperiencepage': (context) => WorkExperiencePage(),
-          //   '/educationpage': (context) => EducationPage(),
-          //   '/projectspage': (context) => ProjectsPage()
-          // }
         )
       ),
     );
