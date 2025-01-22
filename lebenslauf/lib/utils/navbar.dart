@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lebenslauf/pages/cv_summary_page.dart';
-import 'package:lebenslauf/pages/education_page.dart';
+import 'package:lebenslauf/pages/skills_page.dart';
 import 'package:lebenslauf/pages/projects_page.dart';
 import 'package:lebenslauf/pages/work_experience_page.dart';
 import 'package:lebenslauf/utils/brightness_state.dart';
@@ -56,7 +56,7 @@ class _NavBarState extends State<NavBar> {
               NavigationRailDestination(
                   icon: Icon(Icons.construction), label: Text('Berufserfahrung')),
               NavigationRailDestination(
-                  icon: Icon(Icons.school), label: Text('Ausbildung')),
+                  icon: Icon(Icons.psychology_outlined), label: Text('Fähigkeiten')),
               NavigationRailDestination(
                   icon: Icon(Icons.code), label: Text('CV-App'))
             ],
@@ -77,7 +77,7 @@ class _NavBarState extends State<NavBar> {
                 BottomNavigationBarItem(
                     icon: Icon(Icons.construction), label: 'Berufserfahrung'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.school), label: 'Ausbildung'),
+                    icon: Icon(Icons.psychology_outlined), label: 'Fähigkeiten'),
                 BottomNavigationBarItem(
                     icon: Icon(Icons.code), label: 'CV-App')
               ],
@@ -93,7 +93,7 @@ class _NavBarState extends State<NavBar> {
       case 1:
         return WorkExperiencePage();
       case 2:
-        return EducationPage();
+        return SkillsPage();
       case 3:
         return ProjectsPage();
       default:

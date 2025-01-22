@@ -4,9 +4,10 @@ class WorkExperienceModel {
   final String jobtitle;
   final List tasks;
 
-  WorkExperienceModel(
-      {required this.employer,
-      required this.period,
-      required this.jobtitle,
-      required this.tasks});
+  WorkExperienceModel({
+    required this.employer,
+    required this.period,
+    required this.jobtitle,
+    required this.tasks
+  });
 }

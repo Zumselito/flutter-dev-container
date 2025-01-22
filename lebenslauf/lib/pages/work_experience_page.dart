@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lebenslauf/data/work_experience_data.dart';
+import 'package:lebenslauf/utils/helper_widgets.dart';
 import 'package:lebenslauf/utils/work_experience_tile.dart';
 
 class WorkExperiencePage extends StatelessWidget {
@@ -8,16 +9,45 @@ class WorkExperiencePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          title: Center(child:
-          Text('Berufserfahrung', style: TextStyle(fontSize: 30,))),
+      appBar: AppBar(
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              color: Colors.white,
+              Icons.construction),
+              addHorizontalSpace(5),
+            Text(
+              style: TextStyle(color: Colors.white),
+              'Berufserfahrung'
+            )
+        ]),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(15),
+            bottomRight: Radius.circular(15)
+          )
         ),
-        body: Expanded(
-            child: ListView.builder(
-                itemCount: WorkExperienceData().workExperiences.length,
-                itemBuilder: (context, index) {
-                  return WorkExperienceTile(workexperience: WorkExperienceData().workExperiences[index]);
-                })));
+      ),
+      body: Expanded(
+        child: ListView.builder(
+          itemCount: WorkExperienceData().workExperiences.length,
+          itemBuilder: (context, index) {
+            return Container(
+              margin: EdgeInsets.only(left: 15, top: 15, right: 15),
+              padding: EdgeInsets.all(30),
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.primaryContainer,
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(15),
+                  bottomRight: Radius.circular(15)
+                )
+              ),
+              child: WorkExperienceTile(workexperience: WorkExperienceData().workExperiences[index])
+            );
+          }
+        )
+      )
+    );
   }
 }

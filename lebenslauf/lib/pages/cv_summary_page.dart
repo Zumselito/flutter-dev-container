@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lebenslauf/utils/helper_widgets.dart';
 import 'package:lebenslauf/data/cv_summary_data.dart';
+import 'package:lebenslauf/utils/content_container.dart';
 
 class CVSummaryPage extends StatelessWidget {
   const CVSummaryPage({super.key});
@@ -21,7 +23,16 @@ class CVSummaryPage extends StatelessWidget {
             stretch: true,
             flexibleSpace: FlexibleSpaceBar(
               background: Image.asset('assets/img/appbar-bg.jpg', fit: BoxFit.cover),
-              title: Text('Berufsprofil', style: TextStyle(color: Colors.white),),
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    color: Colors.white,
+                    Icons.person_search),
+                  addHorizontalSpace(5),
+                  Text(style: TextStyle(color: Colors.white), 'Berufsprofil')
+                ]
+              ),
               collapseMode: CollapseMode.parallax,
               centerTitle: true,
               stretchModes: [
@@ -32,26 +43,18 @@ class CVSummaryPage extends StatelessWidget {
             ),
           ),
           SliverToBoxAdapter(child: SizedBox(
-            height: MediaQuery.of(context).size.width >= 640 ? MediaQuery.of(context).size.height - 55 : MediaQuery.of(context).size.height - 110,
             child: Column(children: [
-              Container(
-                margin: EdgeInsets.all(15),
-                padding: EdgeInsets.all(30),
-                decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.surfaceContainer,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(10),
-                    bottomRight: Radius.circular(10)
-                  )
-                ),
-                child: CVSummaryData.cvSummaryText
-                )
+              TextContainer(text: CVText.cvSummaryText.toString()),
+              TitleContainer(icon: Icons.school, text: 'Ausbildung'),
+              CV3HeaderBulletContainer(content: CV3HeaderBulletText().university),
+              CV3HeaderBulletContainer(content: CV3HeaderBulletText().universityabroad),
+              CV3HeaderBulletContainer(content: CV3HeaderBulletText().schooldegree),
+              addVerticalSpace(25)
             ],)
             )
           )
         ],
       ),
-      /// bottomNavigationBar: BottomNavigationBar(items: items),
     );
   }
 }

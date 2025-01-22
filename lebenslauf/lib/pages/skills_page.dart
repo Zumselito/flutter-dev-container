@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lebenslauf/utils/helper_widgets.dart';
 
-class ProjectsPage extends StatelessWidget {
-  const ProjectsPage({super.key});
+class SkillsPage extends StatelessWidget {
+  const SkillsPage({super.key});
 
  @override
   Widget build(BuildContext context) {
@@ -13,11 +13,11 @@ class ProjectsPage extends StatelessWidget {
           children: [
             Icon(
               color: Colors.white,
-              Icons.code),
+              Icons.psychology_outlined),
               addHorizontalSpace(5),
             Text(
               style: TextStyle(color: Colors.white),
-              'CV-App'
+              'Fähigkeiten'
             )
         ]),
         shape: RoundedRectangleBorder(

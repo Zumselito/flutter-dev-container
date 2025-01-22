@@ -37,7 +37,7 @@ class _CVAppState extends State<CVApp> {
           themeMode: _themeMode,
           home: Center(
             child: Container(
-              constraints: const BoxConstraints(maxWidth: 1000),
+              constraints: const BoxConstraints(maxWidth: 900),
               child: NavBar(),
             ),
           ),
