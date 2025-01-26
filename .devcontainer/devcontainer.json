@@ -1,0 +1,13 @@
+{
+  "name": "Flutter",
+  "image": "ghcr.io/thephaseless/devcontainers/flutter:latest",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.makefile-tools"
+      ]
+    }
+  },
+  "updateContentCommand": "sudo apt update && flutter upgrade",
+  "postCreateCommand": "git config --global user.email 'zumselito@gmail.com' && git config --global user.name 'Zumsel'"
+}
