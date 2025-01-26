@@ -1,4 +1,3 @@
-// For format details, see https://aka.ms/devcontainer.json.
 {
   "name": "Flutter",
   "image": "ghcr.io/thephaseless/devcontainers/flutter:latest",
@@ -9,5 +8,6 @@
       ]
     }
   },
-  "postAttachCommand": "sudo apt update && flutter upgrade"
+  "updateContentCommand": "sudo apt update && flutter upgrade",
+  "postCreateCommand": "git config --global user.email 'zumselito@gmail.com' && git config --global user.name 'Zumsel'"
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:cv/data/sd_data.dart';
 import 'package:cv/utils/helper_widgets.dart';
-import 'package:cv/data/cv_summary_data.dart';
 import 'package:cv/utils/content_container.dart';
 
 class CVSummaryPage extends StatelessWidget {
@@ -44,12 +44,12 @@ class CVSummaryPage extends StatelessWidget {
           ),
           SliverToBoxAdapter(child: SizedBox(
             child: Column(children: [
-              TextContainer(text: CVText.cvSummaryText.toString()),
+              TextContainer(text: CVData.cvSummaryText),
               TitleContainer(icon: Icons.school, text: 'Ausbildung'),
-              CV3HeaderBulletContainer(content: CV3HeaderBulletText().university),
-              CV3HeaderBulletContainer(content: CV3HeaderBulletText().universityabroad),
-              CV3HeaderBulletContainer(content: CV3HeaderBulletText().schooldegree),
-              addVerticalSpace(25)
+              CV3HeaderBulletContainer(content: CVData().university),
+              CV3HeaderBulletContainer(content: CVData().universityabroad),
+              CV3HeaderBulletContainer(content: CVData().schooldegree),
+              addVerticalSpace(15)
             ],)
             )
           )

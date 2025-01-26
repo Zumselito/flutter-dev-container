@@ -40,7 +40,7 @@ ThemeData lightTheme = ThemeData(
         primaryContainer: lightPrimaryContainerBackgroundeColor,
         secondary: lightSecondaryColor,
         secondaryContainer: lightSecondaryContainerBackgroundeColor,
-        shadow: Colors.transparent,
+        shadow: Colors.black,
         tertiary: lightTertiaryColor,
         tertiaryContainer: lightTertiaryContainerBackgroundeColor,
         surface: lightAppBackgroundeColor),
@@ -69,7 +69,12 @@ ThemeData lightTheme = ThemeData(
         unselectedLabelTextStyle: TextStyle(color: lightSecondaryTextColor, fontWeight: FontWeight.w500)),
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-            iconColor: lightPrimaryTextColor, elevation: 0)),
+            iconColor: lightPrimaryTextColor,
+            elevation: 0,
+            shadowColor: Colors.transparent,
+            padding: const EdgeInsets.symmetric(
+              vertical: 5,
+              horizontal: 15))),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: Colors.transparent,
         selectedItemColor: lightQuaternaryTextColor,
@@ -112,7 +117,7 @@ ThemeData darkTheme = ThemeData(
         primaryContainer: darkPrimaryContainerBackgroundColor,
         primaryFixed: darkQuaternaryColor,
         primaryFixedDim: darkQuaternaryColor,
-        shadow: Colors.transparent,
+        shadow: Colors.black,
         secondary: darkSecondaryColor,
         secondaryContainer: darkSecondaryContainerBackgroundColor,
         secondaryFixed: darkQuaternaryColor,
@@ -141,7 +146,7 @@ ThemeData darkTheme = ThemeData(
         displayMedium: TextStyle(color: darkPrimaryTextColor),
         displaySmall: TextStyle(color: darkQuaternaryColor),
         headlineLarge: TextStyle(color: darkSecondaryColor),
-        headlineMedium: TextStyle(color: darkPrimaryTextColor),
+        headlineMedium: TextStyle(color: darkPrimaryColor),
         headlineSmall: TextStyle(color: darkQuaternaryColor),
         labelLarge: TextStyle(color: darkSecondaryColor),
         labelMedium: TextStyle(color: darkPrimaryTextColor),
@@ -158,7 +163,12 @@ ThemeData darkTheme = ThemeData(
         unselectedLabelTextStyle: TextStyle(color: darkPrimaryTextColor)),
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-            iconColor: darkSecondaryColor, elevation: 0)),
+            iconColor: darkSecondaryColor,
+            elevation: 0,
+            shadowColor: Colors.transparent,
+            padding: const EdgeInsets.symmetric(
+              vertical: 5,
+              horizontal: 15),)),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: Colors.transparent,
         selectedItemColor: darkPrimaryColor,

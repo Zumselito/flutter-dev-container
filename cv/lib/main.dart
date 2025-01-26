@@ -25,24 +25,24 @@ class _CVAppState extends State<CVApp> {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
+    return Container(
         alignment: Alignment.center,
-        decoration: const BoxDecoration(image: DecorationImage(image: AssetImage('../assets/img/app-bg.jpg'), fit: BoxFit.cover)),
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('assets/img/app-bg.jpg'),
+                fit: BoxFit.cover)),
         child: MaterialApp(
-          title: 'Curriculum Vitae',
+          title: 'Flutter-CV-App',
           debugShowCheckedModeBanner: false,
           theme: lightTheme,
           darkTheme: darkTheme,
           themeMode: _themeMode,
           home: Center(
             child: Container(
-              constraints: const BoxConstraints(maxWidth: 900),
+              constraints: const BoxConstraints(maxWidth: 1024),
               child: NavBar(),
             ),
           ),
-        )
-      ),
-    );
+        ));
   }
 }
