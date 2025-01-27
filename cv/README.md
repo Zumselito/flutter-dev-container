@@ -10,11 +10,11 @@ Die Entwicklungsumgebung dieses Projektes besteht aus einem Devcontainer der mit
 
 ## Custom Theming
 
-Layout-/Design-Anpassungen wurden, sobald möglich, über die [Standard-Layout-Anpassungsmethoden](cv/lib/theme/theme_customize.dart) von Material vorgenommen.
+Layout-/Design-Anpassungen wurden, sobald möglich, über die [Standard-Layout-Anpassungsmethoden](lib/theme/theme_customize.dart) von Material vorgenommen.
 
 ## NavigationRail/NavigationBar
 
-Ein responsives Merkmal ist der Wechsel der NavigationBar in mobiler Ansicht zu einem NavigationRail in Ansicht größer 640 Pixel Width (siehe [navbar.dart](cv/lib/utils/navbar.dart)).
+Ein responsives Merkmal ist der Wechsel der NavigationBar in mobiler Ansicht zu einem NavigationRail in Ansicht größer 640 Pixel Width (siehe [navbar.dart](lib/utils/navbar.dart)).
 
 ### Entfaltungsbutton NavigationRail
 
