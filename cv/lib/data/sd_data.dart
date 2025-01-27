@@ -28,7 +28,7 @@ class CVData {
     subheader: 'Allgemeine Hochschulreife',
     toprightheader: '08.1990 - 06.1994',
     bullets: [
-      'Leistungskurse: Mathematik und Geometrie',
+      'Leistungskurse: Mathematik und Geographie',
     ],
   );
 
@@ -36,7 +36,7 @@ class CVData {
     CV3HeaderBulletModel(
       header: 'Freiberufler',
       subheader: 'Full-Stack-Web-Entwickler',
-      toprightheader: 'Ab 01.2022',
+      toprightheader: 'Seit 01.2021',
       bullets: [
         'Entwicklung, Überarbeitung und Wartung von Webseiten',
         'Beratung der Digitalisierung',
@@ -48,10 +48,10 @@ class CVData {
     CV3HeaderBulletModel(
       header: 'Nordwest-Zeitung',
       subheader: 'Online-Kampagnen-Manager',
-      toprightheader: '06.2021 - 12.2021',
+      toprightheader: '07.2015 - 10.2020',
       bullets: [
         'Kampagnen- bzw. Werbemittelmanagement inkl. Entwicklung und Unterstützung des Sales-Teams diesbezüglich',
-        'Einrichtung und Durchführung des Qualitätsmanagements der digitaler Werbeschaltung',
+        'Einrichtung und Durchführung des Qualitätsmanagements der digitalen Werbeschaltung',
         'Werbeplatz-Inventar- und Ertragsmanagement in Abstimmung mit den technischen Verantwortlichen',
         'Entwicklung eines effizienten und einheitlichen Berichtssystems durch maximale Automatisierung',
         'Umfassende Betreuung, Anwendung und Weiterentwicklung des Tag-Managers (Google)',
@@ -61,7 +61,7 @@ class CVData {
     CV3HeaderBulletModel(
       header: 'digimedia tech',
       subheader: 'Geschäftsführer',
-      toprightheader: '12.2012 - 12.2015',
+      toprightheader: '12.2012 - 06.2015',
       bullets: [
         'Aufbau von Software-Entwicklerteams in Serbien',
         'Einrichtung und Umsetzung des agilen Produktmanagements (Scrum, CI/CD)',
@@ -82,7 +82,7 @@ class CVData {
       ],
     ),
     CV3HeaderBulletModel(
-      header: 'Axel Springer AG – ASMI',
+      header: 'Axel Springer – ASMI',
       subheader: 'Leiter Technical Development',
       toprightheader: '07.2010 - 12.2010',
       bullets: [
@@ -90,12 +90,12 @@ class CVData {
         'Entwicklung von Konzepten für die mögliche Übernahme neuer Geschäftsfelder',
         'Ermittlung von Umsatz-Potenzialen innovativer Methoden und Technologien sowie möglicher neuer Geschäftsfelder',
         'Vorstellung potenzieller Partner-Technologien an die Abteilungsleitung inkl. Empfehlungen',
-        'Rekrutierung von Spezialkräften für den Team-Aufbau zur Anwendung neuer Technologien',
+        'Rekrutierung von Spezialisten für den Team-Aufbau zur Anwendung neuer Technologien',
         'Vorstellung neuer angewandter Technologien gegenüber Kooperationspartnern'
       ],
     ),
     CV3HeaderBulletModel(
-      header: 'Axel Springer AG – ASMI',
+      header: 'Axel Springer – ASMI',
       subheader: 'Teamleiter Inventory Management',
       toprightheader: '01.2009 - 06.2010',
       bullets: [
@@ -103,7 +103,7 @@ class CVData {
         'Entwicklung von Konzepten für die mögliche Übernahme neuer Geschäftsfelder',
         'Ermittlung von Umsatz-Potenzialen innovativer Methoden und Technologien sowie möglicher neuer Geschäftsfelder',
         'Vorstellung potenzieller Partner-Technologien an die Abteilungsleitung inkl. Empfehlungen',
-        'Rekrutierung von Spezialkräften für den Team-Aufbau zur Anwendung neuer Technologien',
+        'Rekrutierung von Spezialisten für den Team-Aufbau zur Anwendung neuer Technologien',
         'Vorstellung neuer angewandter Technologien gegenüber Kooperationspartnern'
       ],
     ),
@@ -115,7 +115,7 @@ class CVData {
         'Bestimmung, Analyse und Optimierung von Werbeplatz- bzw. AdTag-Strukturen',
         'Migration neuer AdServer-Systeme (Falk AdSolution, DFP von Doubleclick)',
         'Marktanalyse und Bestimmung der Werbeproduktpreise',
-        'Alleinige Umsetzung des Ad- bzw.  Kampagnen- Managements',
+        'Alleinige Umsetzung des Ad- bzw. Kampagnen-Managements',
         'Qualitätsmanagement der Werbekampagnen und erweitertes Reporting',
         'Account-Management und Betreuung von Mediaagenturen und direkte Werbekunden',
         'Kundenakquise'
@@ -124,32 +124,38 @@ class CVData {
     CV3HeaderBulletModel(
       header: 'Freiberufler',
       subheader: 'Full-Stack-Web-Entwickler',
-      toprightheader: '01.2006 - 02.2006',
+      toprightheader: '01.2004 - 01.2006',
       bullets: [
-        'Optimierung von Design und Usability der Webauftritte',
-        'Implementierung von und Mitarbeiterausbildung für die Nutzung neuer Content Management Systeme',
-        'Beratung in und Umsetzung von SEO und weiterer Online-Marketing-Maßnahmen'
+        'Optimierung des Designs und der Usability von Webauftritten',
+        'Implementierung aktuellster Content Management Systeme (CMS) und Mitarbeiterschulung der Nutzung selbiger',
+        'Entwicklung individueller CMS-Erweiterungen/Plugins',
+        'Sowohl Beratung für die Umsetzung von SEO- und weiterer Online-Marketing-Maßnahmen als auch Umsetzung dieser Maßnahmen',
+        'Erstellung moderner digitaler Werbemittel'
       ],
     ),
     CV3HeaderBulletModel(
       header: 'Interactive Media CCSP',
-      subheader: 'Produkt-Manager',
-      toprightheader: '03.2000 - 10.2001',
+      subheader: 'Produktmanager',
+      toprightheader: '11.2000 - 12.2003',
       bullets: [
-        'Beratung/Unterstützung verschiedener Kunden-Webseiten in Bezug auf ihre Vermarktung',
-        'Beobachtung und Planung des Werbeplatz-Inventars der Kunden-Webseiten',
-        'Unterstützung des Sales Teams des Unternehmens durch Entwicklung und Präsentation neuer Werbeprodukte der Kunden-Webseiten',
-        'Berichten der Vermarktungsergebnisse an die beteiligten Parteien'
+        'Betreuung von Online-Portalen in Bezug auf Ihre Werbeplatz-Vermarktung',
+        'Entwicklung von Angebotskonzepten für den Verkauf digitaler Werbeplätze',
+        'Entwicklung und Konzeption von Objekt- und Branchenpräsentationen sowie von Crossmedia-Angeboten',
+        'Reporting gegebüber betreuter Online-Portalen',
+        'Aktive Mitarbeit bei der Konzeptionsphase der Online-Portale',
+        'Erstellung von Umsatzprognosen in Zusammenarbeit mit dem/der Abteilungsleiter/in',
+        'Erarbeitung von Entscheidungsvorlagen für den/die Abteilungsleiter/in'
       ],
     ),
     CV3HeaderBulletModel(
-      header: 'Axel Springer AG – Interactive Media',
+      header: 'Axel Springer – Interactive Media',
       subheader: 'Kampagnen/Ad-Manager',
-      toprightheader: '03.2000 - 10.2001',
+      toprightheader: '03.2000 - 10.2000',
       bullets: [
-        'Technische Unterstützung des Sales Teams des Unternehmens, der Mediaagenturen und Direktkunden',
+        'Technische Unterstützung des Sales-Teams, der Mediaagenturen und Direktkunden',
         'Aufsetzen von Werbekampagnen im AdServer',
-        'Aufbau eines Qualitätsmanagements für die Werbekampagnen'
+        'Aufbau eines Qualitätsmanagements für Werbekampagnen und Werbemittel',
+        'Anpassung der Werbemittel mit HTML, CSS und JavaScript'
       ],
     )
   ];
@@ -225,21 +231,16 @@ class CVData {
         skill: 'Deutsch',
         category: 'Sprachen',
         level: 10,
-        description: 'Muttersprache'),
+        description: ''),
     CVSkillLevelModel(
         skill: 'Englisch',
         category: 'Sprachen',
         level: 8,
-        description: 'Verhandlungssicher'),
+        description: ''),
     CVSkillLevelModel(
         skill: 'Spanisch',
         category: 'Sprachen',
         level: 3,
-        description: 'Grundkenntnisse'),
-    CVSkillLevelModel(
-        skill: 'Blindes 10-Finger-Tastenschreiben',
-        category: 'Persönlich',
-        level: 9,
         description: ''),
   ];
 }

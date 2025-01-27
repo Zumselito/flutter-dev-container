@@ -1,16 +1,33 @@
-# cv
+# Flutter-Lebenslauf-App
 
-A new Flutter project.
+Diese Flutter-App dient der Präsentation meines Lebenslaufs. Folgende Flutter/Dart-Techniken bzw. -Methoden wurden angewandt:
 
-## Getting Started
+[!IMPORTANT] Diese Dokumentation ist noch in der Entstehung
 
-This project is a starting point for a Flutter application.
+## Entwicklungsumgebung
 
-A few resources to get you started if this is your first Flutter project:
+Die Entwicklungsumgebung dieses Projektes besteht aus einem Devcontainer der mit Docker und VSCode bearbeitet wurde.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Custom Theming
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Layout-/Design-Anpassungen wurden, sobald möglich, über die [Standard-Layout-Anpassungsmethoden](cv/lib/theme/theme_customize.dart) von Material vorgenommen.
+
+## NavigationRail/NavigationBar
+
+Ein responsives Merkmal ist der Wechsel der NavigationBar in mobiler Ansicht zu einem NavigationRail in Ansicht größer 640 Pixel Width (siehe [navbar.dart](cv/lib/utils/navbar.dart)).
+
+### Entfaltungsbutton NavigationRail
+
+...
+
+## Startseite mit SliverAppBar
+
+...
+
+## Dark Mode & Dark Mode Toggle-Button
+
+...
+
+## ListView & Custom-Container-Layout unter "Berufserfahrung" und "Fahigkeiten"
+
+...

@@ -134,41 +134,39 @@ class CVHeaderBarometerTextContainer extends StatelessWidget {
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        if (content.category != '')
+                          Text('${content.category}: ',
+                              style: darkTheme.textTheme.headlineSmall),
                         Expanded(
                             child: Text(content.skill,
                                 style: darkTheme.textTheme.headlineMedium)),
-                        if (content.category != '')
-                          Text(content.category,
-                              style: darkTheme.textTheme.headlineSmall)
                       ],
                     ),
                     Container(
-                        margin: EdgeInsets.only(top: 10),
+                        margin: EdgeInsets.only(top: 15),
                         child: Row(children: [
                           for (int i = 0; i < 10; i++)
                             (i < content.level)
                                 ? Expanded(
                                     child: Center(
-                                        child: Text(
-                                            style: TextStyle(
-                                                color: darkTheme
-                                                    .colorScheme.secondary,
-                                                fontSize: 50,
-                                                fontWeight: FontWeight.w900),
-                                            '>')))
+                                        child: Icon(
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .secondary,
+                                            size: 30,
+                                            Icons.psychology_outlined)))
                                 : Expanded(
                                     child: Center(
-                                        child: Text(
-                                            style: TextStyle(
-                                              color: Color(0x11efdab9),
-                                              fontSize: 50,
-                                              fontWeight: FontWeight.w900,
-                                            ),
-                                            '>')))
+                                        child: Icon(
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .inversePrimary,
+                                            size: 30,
+                                            Icons.psychology_outlined)))
                         ])),
                     if (content.description != '')
                       Container(
-                          margin: EdgeInsets.only(top: 10),
+                          margin: EdgeInsets.only(top: 15),
                           child: Column(children: [
                             addHorizontalSpace(20),
                             Text(content.description)
