@@ -2,7 +2,8 @@
 
 Diese Flutter-App dient der Präsentation meines Lebenslaufs. Folgende Flutter/Dart-Techniken bzw. -Methoden wurden angewandt:
 
-[!IMPORTANT] Diese Dokumentation ist noch in der Entstehung
+> [!IMPORTANT]
+> Diese Dokumentation ist noch in der Entstehung
 
 ## Entwicklungsumgebung
 
