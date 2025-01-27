@@ -5,15 +5,16 @@ import 'package:google_fonts/google_fonts.dart';
 // const fonts = ...; - Additional fonts like exo 2,...
 
 // LightTheme
-const lightPrimaryColor = Color(0xff78b0a0);
-const lightSecondaryColor = Color(0xffC98C81);
+const lightPrimaryColor = Color(0xffC98C81);
+const lightSecondaryColor = Color(0xff78b0a0);
 const lightTertiaryColor = Color(0xffefdab9);
+const lightPrimaryTransparentColor = Color(0x44C98C81);
 const lightPrimaryTextColor = Color(0xffEA6B47);
 const lightSecondaryTextColor = Color(0xff3b9b6d);
 const lightTertiaryTextColor = Color(0xff3f78A2);
 const lightQuaternaryTextColor = Color(0xffDDA032);
 const lightAppBackgroundeColor = Color(0xaaeeeeee);
-const lightPrimaryContainerBackgroundeColor = Color(0x77ffffff);
+const lightPrimaryContainerBackgroundeColor = Color(0xaaffffff);
 const lightSecondaryContainerBackgroundeColor = Color(0x113b9b6d);
 const lightTertiaryContainerBackgroundeColor = Color(0x113f78A2);
 
@@ -22,6 +23,7 @@ const darkPrimaryColor = Color(0xffDDA032);
 const darkSecondaryColor = Color(0xff3b9b6d);
 const darkTertiaryColor = Color(0xffEA6B47);
 const darkQuaternaryColor = Color(0xff3f78A2);
+const darkPrimaryTransparentColor = Color(0x22EA6B47);
 const darkPrimaryTextColor = Color(0xffefdab9);
 const darkSecondaryTextColor = Color(0xff78b0a0);
 const darkTertiaryTextColor = Color(0xffC98C81);
@@ -36,6 +38,7 @@ ThemeData lightTheme = ThemeData(
         brightness: Brightness.light,
         seedColor: lightTertiaryColor,
         // Options
+        inversePrimary: lightPrimaryTransparentColor,
         primary: lightPrimaryColor,
         primaryContainer: lightPrimaryContainerBackgroundeColor,
         secondary: lightSecondaryColor,
@@ -59,22 +62,21 @@ ThemeData lightTheme = ThemeData(
         titleSmall: TextStyle(color: lightPrimaryTextColor),
         labelLarge: TextStyle(color: lightPrimaryTextColor),
         labelMedium: TextStyle(color: lightPrimaryTextColor),
-        labelSmall: TextStyle(color: lightPrimaryTextColor)
-    )),
+        labelSmall: TextStyle(color: lightPrimaryTextColor))),
     appBarTheme: AppBarTheme(backgroundColor: lightPrimaryColor),
     navigationRailTheme: NavigationRailThemeData(
         indicatorColor: lightQuaternaryTextColor,
-        selectedLabelTextStyle: TextStyle(color: lightQuaternaryTextColor, fontWeight: FontWeight.w500),
+        selectedLabelTextStyle: TextStyle(
+            color: lightQuaternaryTextColor, fontWeight: FontWeight.w500),
         unselectedIconTheme: IconThemeData(color: lightSecondaryTextColor),
-        unselectedLabelTextStyle: TextStyle(color: lightSecondaryTextColor, fontWeight: FontWeight.w500)),
+        unselectedLabelTextStyle: TextStyle(
+            color: lightSecondaryTextColor, fontWeight: FontWeight.w500)),
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
             iconColor: lightPrimaryTextColor,
             elevation: 0,
             shadowColor: Colors.transparent,
-            padding: const EdgeInsets.symmetric(
-              vertical: 5,
-              horizontal: 15))),
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15))),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: Colors.transparent,
         selectedItemColor: lightQuaternaryTextColor,
@@ -87,58 +89,58 @@ ThemeData lightTheme = ThemeData(
 ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     colorScheme: ColorScheme.fromSeed(
-        brightness: Brightness.dark,
-        seedColor: Color(0xff181214),
-        // Options
-        error: darkQuaternaryColor,
-        errorContainer: darkQuaternaryColor,
-        inversePrimary: darkQuaternaryColor,
-        inverseSurface: darkQuaternaryColor,
-        onError: darkQuaternaryColor,
-        onInverseSurface: darkQuaternaryColor,
-        onPrimary: darkQuaternaryColor,
-        onErrorContainer: darkQuaternaryColor,
-        onPrimaryContainer: darkPrimaryContainerBackgroundColor,
-        onPrimaryFixed: darkQuaternaryColor,
-        onPrimaryFixedVariant: darkQuaternaryColor,
-        onSecondary: darkQuaternaryColor,
-        onSecondaryContainer: darkPrimaryTextColor, // Active NavigationRailDestination icon
-        onSecondaryFixed: darkQuaternaryColor,
-        onSecondaryFixedVariant: darkQuaternaryColor,
-        onSurface: darkAppBackgroundColor,
-        onSurfaceVariant: darkQuaternaryColor,
-        onTertiary: darkQuaternaryColor,
-        onTertiaryContainer: darkTertiaryContainerBackgroundColor,
-        onTertiaryFixed: darkQuaternaryColor,
-        onTertiaryFixedVariant: darkQuaternaryColor,
-        outline: darkQuaternaryColor,
-        outlineVariant: darkQuaternaryColor,
-        primary: darkPrimaryColor,
-        primaryContainer: darkPrimaryContainerBackgroundColor,
-        primaryFixed: darkQuaternaryColor,
-        primaryFixedDim: darkQuaternaryColor,
-        shadow: Colors.black,
-        secondary: darkSecondaryColor,
-        secondaryContainer: darkSecondaryContainerBackgroundColor,
-        secondaryFixed: darkQuaternaryColor,
-        secondaryFixedDim: darkQuaternaryColor,
-        scrim: darkQuaternaryColor,
-        surface: darkAppBackgroundColor,
-        surfaceBright: darkQuaternaryColor,
-        surfaceContainer: darkQuaternaryColor,
-        surfaceContainerHigh: darkQuaternaryColor,
-        surfaceContainerHighest: darkQuaternaryColor,
-        surfaceContainerLow: darkAppBackgroundColor, // ElevatedButton background
-        surfaceContainerLowest: darkQuaternaryColor,
-        surfaceDim: darkQuaternaryColor,
-        surfaceTint: darkQuaternaryColor,
-        tertiary: darkTertiaryColor,
-        tertiaryContainer: darkTertiaryContainerBackgroundColor,
-        tertiaryFixed: darkQuaternaryColor,
-        tertiaryFixedDim: darkQuaternaryColor,
-        ),
-    textTheme:
-      GoogleFonts.ibmPlexMonoTextTheme(TextTheme(
+      brightness: Brightness.dark,
+      seedColor: Color(0xff181214),
+      // Options
+      error: darkQuaternaryColor,
+      errorContainer: darkQuaternaryColor,
+      inversePrimary: darkPrimaryTransparentColor,
+      inverseSurface: darkQuaternaryColor,
+      onError: darkQuaternaryColor,
+      onInverseSurface: darkQuaternaryColor,
+      onPrimary: darkQuaternaryColor,
+      onErrorContainer: darkQuaternaryColor,
+      onPrimaryContainer: darkPrimaryContainerBackgroundColor,
+      onPrimaryFixed: darkQuaternaryColor,
+      onPrimaryFixedVariant: darkQuaternaryColor,
+      onSecondary: darkQuaternaryColor,
+      onSecondaryContainer:
+          darkPrimaryTextColor, // Active NavigationRailDestination icon
+      onSecondaryFixed: darkQuaternaryColor,
+      onSecondaryFixedVariant: darkQuaternaryColor,
+      onSurface: darkAppBackgroundColor,
+      onSurfaceVariant: darkQuaternaryColor,
+      onTertiary: darkQuaternaryColor,
+      onTertiaryContainer: darkTertiaryContainerBackgroundColor,
+      onTertiaryFixed: darkQuaternaryColor,
+      onTertiaryFixedVariant: darkQuaternaryColor,
+      outline: darkQuaternaryColor,
+      outlineVariant: darkQuaternaryColor,
+      primary: darkPrimaryColor,
+      primaryContainer: darkPrimaryContainerBackgroundColor,
+      primaryFixed: darkQuaternaryColor,
+      primaryFixedDim: darkQuaternaryColor,
+      shadow: Colors.black,
+      secondary: darkSecondaryColor,
+      secondaryContainer: darkSecondaryContainerBackgroundColor,
+      secondaryFixed: darkQuaternaryColor,
+      secondaryFixedDim: darkQuaternaryColor,
+      scrim: darkQuaternaryColor,
+      surface: darkAppBackgroundColor,
+      surfaceBright: darkQuaternaryColor,
+      surfaceContainer: darkQuaternaryColor,
+      surfaceContainerHigh: darkQuaternaryColor,
+      surfaceContainerHighest: darkQuaternaryColor,
+      surfaceContainerLow: darkAppBackgroundColor, // ElevatedButton background
+      surfaceContainerLowest: darkQuaternaryColor,
+      surfaceDim: darkQuaternaryColor,
+      surfaceTint: darkQuaternaryColor,
+      tertiary: darkTertiaryColor,
+      tertiaryContainer: darkTertiaryContainerBackgroundColor,
+      tertiaryFixed: darkQuaternaryColor,
+      tertiaryFixedDim: darkQuaternaryColor,
+    ),
+    textTheme: GoogleFonts.ibmPlexMonoTextTheme(TextTheme(
         bodyLarge: TextStyle(color: darkSecondaryColor),
         bodyMedium: TextStyle(color: darkPrimaryTextColor),
         bodySmall: TextStyle(color: darkQuaternaryColor),
@@ -153,8 +155,7 @@ ThemeData darkTheme = ThemeData(
         labelSmall: TextStyle(color: darkQuaternaryColor),
         titleLarge: TextStyle(color: darkPrimaryColor),
         titleMedium: TextStyle(color: darkPrimaryTextColor),
-        titleSmall: TextStyle(color: darkQuaternaryColor)
-        )),
+        titleSmall: TextStyle(color: darkQuaternaryColor))),
     appBarTheme: AppBarTheme(backgroundColor: darkPrimaryColor),
     navigationRailTheme: NavigationRailThemeData(
         indicatorColor: darkPrimaryColor,
@@ -163,12 +164,11 @@ ThemeData darkTheme = ThemeData(
         unselectedLabelTextStyle: TextStyle(color: darkPrimaryTextColor)),
     elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-            iconColor: darkSecondaryColor,
-            elevation: 0,
-            shadowColor: Colors.transparent,
-            padding: const EdgeInsets.symmetric(
-              vertical: 5,
-              horizontal: 15),)),
+      iconColor: darkSecondaryColor,
+      elevation: 0,
+      shadowColor: Colors.transparent,
+      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
+    )),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: Colors.transparent,
         selectedItemColor: darkPrimaryColor,
