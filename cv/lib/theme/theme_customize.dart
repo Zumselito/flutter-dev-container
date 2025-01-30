@@ -43,7 +43,7 @@ ThemeData lightTheme = ThemeData(
         primaryContainer: lightPrimaryContainerBackgroundeColor,
         secondary: lightSecondaryColor,
         secondaryContainer: lightSecondaryContainerBackgroundeColor,
-        shadow: Colors.black,
+        shadow: Colors.transparent,
         tertiary: lightTertiaryColor,
         tertiaryContainer: lightTertiaryContainerBackgroundeColor,
         surface: lightAppBackgroundeColor),
@@ -63,7 +63,7 @@ ThemeData lightTheme = ThemeData(
         labelLarge: TextStyle(color: lightPrimaryTextColor),
         labelMedium: TextStyle(color: lightPrimaryTextColor),
         labelSmall: TextStyle(color: lightPrimaryTextColor))),
-    appBarTheme: AppBarTheme(backgroundColor: lightPrimaryColor),
+    appBarTheme: AppBarTheme(backgroundColor: lightSecondaryColor),
     navigationRailTheme: NavigationRailThemeData(
         indicatorColor: lightQuaternaryTextColor,
         selectedLabelTextStyle: TextStyle(
@@ -78,7 +78,7 @@ ThemeData lightTheme = ThemeData(
             shadowColor: Colors.transparent,
             padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15))),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        backgroundColor: Colors.transparent,
+        backgroundColor: lightPrimaryContainerBackgroundeColor,
         selectedItemColor: lightQuaternaryTextColor,
         selectedIconTheme: IconThemeData(color: lightQuaternaryTextColor),
         unselectedItemColor: lightSecondaryTextColor,
@@ -120,7 +120,7 @@ ThemeData darkTheme = ThemeData(
       primaryContainer: darkPrimaryContainerBackgroundColor,
       primaryFixed: darkQuaternaryColor,
       primaryFixedDim: darkQuaternaryColor,
-      shadow: Colors.black,
+      shadow: Colors.transparent,
       secondary: darkSecondaryColor,
       secondaryContainer: darkSecondaryContainerBackgroundColor,
       secondaryFixed: darkQuaternaryColor,

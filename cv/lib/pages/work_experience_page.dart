@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cv/utils/appbar.dart';
 import 'package:cv/data/sd_data.dart';
 import 'package:cv/utils/content_container.dart';
 import 'package:cv/utils/helper_widgets.dart';
@@ -9,17 +10,8 @@ class WorkExperiencePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Icon(color: Colors.white, Icons.construction),
-            addHorizontalSpace(5),
-            Text(style: TextStyle(color: Colors.white), 'Berufserfahrung')
-          ]),
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(15),
-                  bottomRight: Radius.circular(15))),
-        ),
+        appBar: CVAppBar(
+            appbaricon: Icons.construction, appbartitle: 'Berufserfahrung'),
         body: Column(children: [
           Expanded(
               child: ListView.builder(
@@ -30,5 +22,6 @@ class WorkExperiencePage extends StatelessWidget {
                   })),
           addVerticalSpace(15)
         ]));
+        //drawer: CVDrawer());
   }
 }

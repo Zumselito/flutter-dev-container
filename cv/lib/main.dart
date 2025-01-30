@@ -29,8 +29,7 @@ class _CVAppState extends State<CVApp> {
         alignment: Alignment.center,
         decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/img/app-bg.jpg'),
-                fit: BoxFit.cover)),
+                image: AssetImage('assets/img/app-bg.jpg'), fit: BoxFit.cover)),
         child: MaterialApp(
           title: 'Flutter-CV-App',
           debugShowCheckedModeBanner: false,
@@ -39,9 +38,8 @@ class _CVAppState extends State<CVApp> {
           themeMode: _themeMode,
           home: Center(
             child: Container(
-              constraints: const BoxConstraints(maxWidth: 1024),
-              child: NavBar(),
-            ),
+                constraints: const BoxConstraints(maxWidth: 1024),
+                child: SafeArea(child: NavBar())),
           ),
         ));
   }
