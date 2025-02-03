@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:cv/utils/appbar.dart';
+import 'package:cv/utils/appbars/appbar.dart';
 import 'package:cv/data/sd_data.dart';
 import 'package:cv/utils/content_container.dart';
+import 'package:cv/utils/navigation/drawer.dart';
 import 'package:cv/utils/helper_widgets.dart';
 
 class WorkExperiencePage extends StatelessWidget {
@@ -21,7 +22,7 @@ class WorkExperiencePage extends StatelessWidget {
                         content: CVData().workExperiences[index]);
                   })),
           addVerticalSpace(15)
-        ]));
-        //drawer: CVDrawer());
+        ]),
+        drawer: MediaQuery.of(context).size.width < 640 ? CVDrawer() : null);
   }
 }

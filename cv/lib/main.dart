@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cv/theme/theme_customize.dart';
-import 'package:cv/utils/navbar.dart';
+import 'package:cv/utils/navigation/navbar.dart';
 
 void main() => runApp(const CVApp());
 
