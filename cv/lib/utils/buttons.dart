@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:cv/main.dart';
-import 'package:cv/utils/navbar.dart';
+import 'package:cv/utils/navigation/navbar.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class BrightnessStateButton extends StatefulWidget {

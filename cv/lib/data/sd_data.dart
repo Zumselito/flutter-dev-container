@@ -208,7 +208,7 @@ class CVData {
         description:
             'Relationale Datenbanken, wie MariaDB oder MySQL, sowie nicht-relationale Datenbanken, wie MongoDB.'),
     CVSkillLevelModel(
-        skill: 'Versionskontrolle',
+        skill: 'Quellcodeverwaltung',
         category: 'DevOps',
         level: 8,
         description: 'Git/GitHub'),

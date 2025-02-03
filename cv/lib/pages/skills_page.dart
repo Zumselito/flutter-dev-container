@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:cv/utils/appbars/appbar.dart';
 import 'package:cv/data/sd_data.dart';
 import 'package:cv/utils/content_container.dart';
-import 'package:cv/utils/helper_widgets.dart';
+import 'package:cv/utils/navigation/drawer.dart';
 
 class SkillsPage extends StatelessWidget {
   const SkillsPage({super.key});
@@ -9,26 +10,17 @@ class SkillsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Icon(color: Colors.white, Icons.psychology_outlined),
-            addHorizontalSpace(5),
-            Text(style: TextStyle(color: Colors.white), 'Fähigkeiten')
-          ]),
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(15),
-                  bottomRight: Radius.circular(15))),
-        ),
-        body: Column(children: [
-          Expanded(
-              child: ListView.builder(
-                  itemCount: CVData().skills.length,
-                  itemBuilder: (context, index) {
-                    return CVHeaderBarometerTextContainer(
-                        content: CVData().skills[index]);
-                  })),
-          addVerticalSpace(15)
-        ]));
+        appBar: CVAppBar(
+            appbaricon: Icons.psychology_outlined, appbartitle: 'Fähigkeiten'),
+        body: Container(
+            padding: EdgeInsets.only(top: 15, left: 15),
+            child: SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Wrap(
+                    children: CVData()
+                        .skills
+                        .map((i) => CVHeaderBarometerTextContainer(content: i))
+                        .toList()))),
+        drawer: MediaQuery.of(context).size.width < 640 ? CVDrawer() : null);
   }
 }
