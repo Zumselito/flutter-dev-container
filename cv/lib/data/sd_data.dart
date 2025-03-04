@@ -180,7 +180,7 @@ class CVData {
         skill: 'CMS',
         category: 'Frontend',
         level: 8,
-        description: 'Worpress, Joomla'),
+        description: 'Wordpress, Joomla'),
     CVSkillLevelModel(
         skill: 'Objektorientiertes Programmieren (OOP)',
         category: 'Backend',

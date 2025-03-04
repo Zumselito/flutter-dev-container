@@ -24,25 +24,5 @@
       "type": "dart",
       "flutterMode": "release"
     },
-    {
-      "name": "lebenslauf",
-      "cwd": "lebenslauf",
-      "request": "launch",
-      "type": "dart"
-    },
-    {
-      "name": "lebenslauf (profile mode)",
-      "cwd": "lebenslauf",
-      "request": "launch",
-      "type": "dart",
-      "flutterMode": "profile"
-    },
-    {
-      "name": "lebenslauf (release mode)",
-      "cwd": "lebenslauf",
-      "request": "launch",
-      "type": "dart",
-      "flutterMode": "release"
-    },
   ]
 }
