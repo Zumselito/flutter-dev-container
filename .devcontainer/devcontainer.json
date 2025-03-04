@@ -4,7 +4,8 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-vscode.makefile-tools"
+        "ms-vscode.makefile-tools",
+        "ms-azuretools.vscode-docker"
       ]
     }
   },
