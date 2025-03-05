@@ -5,7 +5,7 @@ class CVData {
       'Mein Name ist Stephan Djordjevic und ich bin Full-Stack-Web-Entwickler. Meine Ausbildung habe ich als Diplom-Volkswirt abgeschlossen und war danach über 20 Jahre in der digitalen Werbebranche tätig. Gleich zu Beginn meiner beruflichen Laufbahn als Online-Kampagnen-Manager hatte ich stetigen Kontakt zu HTML, CSS und JavaScript. Nicht viel später habe ich mich zunächst privat mit opensource Content Management Systemen, wie Joomla und Wordpress und folglich mit PHP beschäftigt. Mit großem Interesse an neuesten Methoden und Technologien habe ich zuletzt mit CD/CI, Containerization sowie weiteren objektorientierten Programmiersprachen wie ReactJS/Typescript und nicht zuletzt mit Flutter/Dart experimentiert. Dabei zeigt insbesondere Flutter auf, wohin die Reise der Software-Entwicklung geht und ich möchte Teil dieser Entwicklung sein.';
 
   final university = CV3HeaderBulletModel(
-    header: 'Universität für Wirtschaft und Politik',
+    header: 'Universität für Wirtschaft und Politik (Hamburg)',
     subheader: 'Diplom-Volkswirt',
     toprightheader: '10.1996 - 07.2003',
     bullets: [
@@ -47,7 +47,7 @@ class CVData {
     ),
     CV3HeaderBulletModel(
       header: 'Nordwest-Zeitung',
-      subheader: 'Online-Kampagnen-Manager',
+      subheader: 'Online-Ad/Kampagnen-Manager',
       toprightheader: '07.2015 - 10.2020',
       bullets: [
         'Kampagnen- bzw. Werbemittelmanagement inkl. Entwicklung und Unterstützung des Sales-Teams diesbezüglich',
@@ -109,7 +109,7 @@ class CVData {
     ),
     CV3HeaderBulletModel(
       header: 'Axel Springer Auto Verlag',
-      subheader: 'Teamleiter Inventory Management',
+      subheader: 'Online-Ad/Kampagnen- & Key-Account-Manager',
       toprightheader: '02.2006 - 12.2008',
       bullets: [
         'Bestimmung, Analyse und Optimierung von Werbeplatz- bzw. AdTag-Strukturen',
@@ -149,7 +149,7 @@ class CVData {
     ),
     CV3HeaderBulletModel(
       header: 'Axel Springer – Interactive Media',
-      subheader: 'Kampagnen/Ad-Manager',
+      subheader: 'Online-Ad/Kampagnen-Manager',
       toprightheader: '03.2000 - 10.2000',
       bullets: [
         'Technische Unterstützung des Sales-Teams, der Mediaagenturen und Direktkunden',
@@ -165,7 +165,7 @@ class CVData {
         skill: 'UI/UX-Basis',
         category: 'Frontend',
         level: 8,
-        description: 'HTML, CSS, JavaScript'),
+        description: 'HTML, CSS, JavaScript/DOM'),
     CVSkillLevelModel(
         skill: 'UI/UX-Technologie-Frameworks',
         category: 'Frontend',
@@ -185,7 +185,7 @@ class CVData {
         skill: 'Objektorientiertes Programmieren (OOP)',
         category: 'Backend',
         level: 7,
-        description: 'Flutter/Dart, Django/Python, Express/Node, Laravel/PHP'),
+        description: 'Flutter/Dart, Django/Python, Node/JS, Laravel/PHP'),
     CVSkillLevelModel(
         skill: 'Server-Betriebssysteme',
         category: 'Backend',
